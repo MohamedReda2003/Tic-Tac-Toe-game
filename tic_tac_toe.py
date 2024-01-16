@@ -2,10 +2,6 @@ import pygame, sys
 import numpy as np
 import random
 import time 
-# import tkinter as tk
-# from tkinter import messagebox
-# import pdb
-
 
 class TicTacToe:
     pygame.init()
@@ -20,7 +16,7 @@ class TicTacToe:
     CIRCLE_WIDTH = 15
     CROSS_WIDTH = 25
     SPACE = 55
-    # pygame.display.set_caption(TITLE)
+    
     clock = pygame.time.Clock()
     
     RED = (255, 0, 0)
@@ -141,10 +137,10 @@ class TicTacToe:
         while running:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    # pygame.quit()
+                    
                     self.restart()
                     self.main_menu()
-                    # sys.exit()
+     
                     running=False
                 if event.type== pygame.MOUSEBUTTONDOWN and not game_over:
                     mouseX = event.pos[0]
@@ -185,10 +181,10 @@ class TicTacToe:
         while running:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    # pygame.quit()
+            
                     self.restart()
                     self.main_menu()
-                    # sys.exit()
+         
                     break
                 
                 if event.type == pygame.MOUSEBUTTONDOWN and not game_over and player%2==1:
@@ -207,7 +203,7 @@ class TicTacToe:
                         player=player % 2+1
                         self.draw_figures()
                 if player%2==0 and not game_over:
-                    # time.sleep(1)
+          
                     try:
                         squares=[]
                         rows=[0,1,2]
@@ -274,10 +270,10 @@ GRAY = (200, 200, 200)
 WIDTH = 600
 HEIGHT = 600
 TITLE = "Tic Tac Toe"
-# Initialize Pygame
+
 pygame.init()
 
-# Set up the game window
+
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 
@@ -300,20 +296,7 @@ class Button:
 
         
 
-# Define the two_players function
-# def two_players():
-    
-#     tic_tac_toe = TicTacToe()
-#     screen.fill(tic_tac_toe.BG_COLOR)
-#     tic_tac_toe.tic_tac_toe_2_players()
-    
-    # Implement the game logic for two players here
 
-# Define the player_vs_computer function
-# def player_vs_computer():
-#     tic_tac_toe = TicTacToe()
-#     screen.fill(tic_tac_toe.BG_COLOR)
-#     tic_tac_toe.tic_tac_toe_against_computer()
 
 
 game=TicTacToe()
